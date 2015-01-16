@@ -1,31 +1,17 @@
 tiny-mosquitto
 ==============
 
-this file is available at
-
-https://github.com/lexlapax/Dockerfiles/blob/master/tiny-mosquitto/README.md
-
-
 description
 -----------
-a minimal runtime only docker encapsulation of the mosquitto mqtt broker available at http://mosquitto.org
+A minimal runtime only docker encapsulation of the mosquitto mqtt broker.
 
-currently uses http://mosquitto.org/files/source/mosquitto-1.3.5.tar.gz
+Currently the version of the mosquitto in use is http://mosquitto.org/files/source/mosquitto-1.3.5.tar.gz
 
-this is built using buildroot v14.11 http://buildroot.uclibc.org/ in order to make the image small.
+This is built using buildroot v14.05 (see http://buildroot.uclibc.org/) in order to make the image small. It has a small size of 20 MB.
 
-the docker image was built with instructions from 
+The docker image was built with instructions from
 
 http://blog.docker.io/2013/06/create-light-weight-docker-containers-buildroot/
-
-the buildroot directory contains the .config file used for running the build.
-
-mosquitto uses malloc_usable_size which is not available in uclibc
-
-the config uses glibc instead because of that
-
-the buildroot/package/mosquitto contains the two required files to include mosquitto into the buildroot build
-
 
 short instructions 
 ------------------

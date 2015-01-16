@@ -1,10 +1,28 @@
-A minimal runtime only docker encapsulation of the mosquitto mqtt broker
+wsn-core
+========
 
-Currently uses http://mosquitto.org/files/source/mosquitto-1.3.5.tar.gz
+description
+-----------
+This dockerfile setups the development environment for wsn-core.
 
-This is built using buildroot v14.05 (see http://buildroot.uclibc.org/) in order to make the image small. It has a small size of 20 MB.
 
-The docker image was built with instructions from
+Dockerfile
+----------
+Base image in use is Ubuntu 14.04.
 
-http://blog.docker.io/2013/06/create-light-weight-docker-containers-buildroot/
+Hardware toolchain has been included, with binaries/libraries from AWS S3.
+
+Code is pulled from snsx wsn-core repository.
+
+To build, simply "docker build -t <target> ."
+
+
+init.sh
+-------
+An init script is included to setup the SSH key and remote origin url after initial run.
+
+To use script simply "./init.sh".
+
+Do ensure that a docker container is running.
+
 
