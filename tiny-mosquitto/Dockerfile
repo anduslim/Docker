@@ -3,12 +3,10 @@
 # built using buildroot following instructions from
 # http://blog.docker.io/2013/06/create-light-weight-docker-containers-buildroot
 FROM tinyimage
-MAINTAINER Lex Lapax <lexlapax@gmail.com>
+MAINTAINER Andus Lim <yuncai83@gmail.com>
 
 
 ADD mosquitto.conf /etc/mosquitto/test.conf
-
-#VOLUME ["/"]
 
 EXPOSE 1884
 ENTRYPOINT ["/usr/sbin/mosquitto"]
