@@ -2,10 +2,11 @@
 
 export WSN_DIR="$HOME/wsn-core"
 
-#if [ ! -d "$WSN_DIR" ]; then
-#  echo "Creating WSN directory in $WSN_DIR"
-#  mkdir -p $WSN_DIR
-#fi
+if [  -d "$WSN_DIR" ]; then
+  #echo "Creating WSN directory in $WSN_DIR"
+  #mkdir -p $WSN_DIR
+  rm -rf $WSN_DIR
+fi
 
 MNT_PATH=`docker inspect -f='{{(index .Volumes "/root/wsn-core")}}' wsn`
 
