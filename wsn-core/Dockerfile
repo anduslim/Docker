@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Andus Lim "yuncai83@gmail.com"
 
-ENV WSN_REPO /root/wsn-core
+ENV WSN_REPO /home/guest/wsn-core
 
 # Install software 
 RUN apt-get install -y software-properties-common && \
