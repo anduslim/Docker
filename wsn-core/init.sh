@@ -2,6 +2,15 @@
 
 export WSN_DIR="$HOME/wsn-core"
 
+while true; do
+    read -p "What is the name of the docker image? " IMAGE_NAME
+    if [ ! -z "$IMAGE_NAME"]; then
+        break
+    fi
+done
+
+eval "docker run -td --name wsn $IMAGE_NAME"
+
 if [  -d "$WSN_DIR" ]; then
   #echo "Creating WSN directory in $WSN_DIR"
   #mkdir -p $WSN_DIR
