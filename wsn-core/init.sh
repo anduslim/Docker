@@ -4,7 +4,7 @@ export WSN_DIR="$HOME/wsn-core"
 
 while true; do
     read -p "What is the name of the docker image? " IMAGE_NAME
-    if [ ! -z "$IMAGE_NAME"]; then
+    if [ ! -z "$IMAGE_NAME" ]; then
         break
     fi
 done
