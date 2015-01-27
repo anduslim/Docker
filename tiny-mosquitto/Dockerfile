@@ -2,7 +2,7 @@
 # file is using http://mosquitto.org/files/source/mosquitto-1.2.3.tar.gz
 # built using buildroot following instructions from
 # http://blog.docker.io/2013/06/create-light-weight-docker-containers-buildroot
-FROM tinyimage
+FROM andus/tinyimage
 MAINTAINER Andus Lim <yuncai83@gmail.com>
 
 
