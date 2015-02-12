@@ -42,7 +42,8 @@ RUN cd $WSN_REPO && \
   wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/Mosquitto.tgz -O - | tar xfz - && \
   wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/security/openSSL.tgz -O - | tar xfz - && \
   wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/security/SHA2.tgz -O - | tar xfz - && \
-  wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/security/crypto.tgz -O - | tar xfz -
+  wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/security/crypto.tgz -O - | tar xfz - && \
+  wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/libev.tgz -O - | tar xfz -
 
 # Change permissions
 RUN chown -R guest:guest /home/guest
