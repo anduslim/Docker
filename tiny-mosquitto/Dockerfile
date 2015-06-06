@@ -8,7 +8,7 @@ MAINTAINER Andus Lim <yuncai83@gmail.com>
 
 ADD mosquitto.conf /etc/mosquitto/test.conf
 
-EXPOSE 1884
+EXPOSE [1883, 1884]
 ENTRYPOINT ["/usr/sbin/mosquitto"]
 CMD ["-c","/etc/mosquitto/test.conf"]
 

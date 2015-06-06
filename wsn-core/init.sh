@@ -17,7 +17,7 @@ if [  -d "$WSN_DIR" ]; then
   rm -rf $WSN_DIR
 fi
 
-MNT_PATH=`docker inspect -f='{{(index .Volumes "/root/wsn-core")}}' wsn`
+MNT_PATH=`docker inspect -f='{{(index .Volumes "/home/guest/wsn-core")}}' wsn`
 
 eval "ln -sf $MNT_PATH $WSN_DIR"
 
