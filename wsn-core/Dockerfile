@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM phusion/baseimage:0.9.16
 
 MAINTAINER Andus Lim "yuncai83@gmail.com"
 
@@ -45,12 +45,17 @@ RUN cd $WSN_REPO && \
   wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/security/crypto.tgz -O - | tar xfz - && \
   wget https://s3-ap-southeast-1.amazonaws.com/sns-wsn-core-shared-libraries/libev.tgz -O - | tar xfz -
 
+
 # Change permissions
 RUN chown -R guest:guest /home/guest
+RUN usermod -a -G docker_env guest
+#RUN chmod 777 -R /etc/container_environment && chmod 777 /etc/container_environment.sh /etc/container_environment.json
+RUN chmod -R 755 /etc/container_environment
+RUN chmod 644 /etc/container_environment.sh /etc/container_environment.json
 
 # Change user
-USER guest
-  
+#USER guest
+
 # Mount Volume
 VOLUME $WSN_REPO
 
